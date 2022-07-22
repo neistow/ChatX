@@ -1,0 +1,21 @@
+<ng-container *ngIf="chatStats$ | async as chatStats else stub">
+  <p>
+    Users in search:
+    <span class="text">{{chatStats.usersInSearch}}</span>
+  </p>
+  <p>
+    Users chatting:
+    <span class="text">{{chatStats.usersChatting}}</span>
+  </p>
+</ng-container>
+
+<ng-template #stub>
+  <p>
+    Users in search:
+    <span class="text">0</span>
+  </p>
+  <p>
+    Users chatting:
+    <span class="text">0</span>
+  </p>
+</ng-template>

@@ -1,0 +1,27 @@
+<div class="chat-top-panel">
+  <button
+    class="cancel-btn"
+    mat-flat-button
+    color="warn"
+    (click)="cancelChat()"
+  >
+    Cancel
+    <mat-icon>cancel</mat-icon>
+  </button>
+  <mat-divider></mat-divider>
+</div>
+
+<app-chat-message-list
+  [messages]="chatMessages$"
+></app-chat-message-list>
+
+<div class="chat-bottom-panel">
+  <app-typing-indicator
+    *ngIf="strangerTyping$ | async"
+  ></app-typing-indicator>
+
+  <app-message-input
+    (messageSent)="onMessageSent($event)"
+    (textTyped)="onTextTyped()"
+  ></app-message-input>
+</div>

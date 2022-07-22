@@ -1,0 +1,45 @@
+<mat-form-field appearance="fill">
+    <textarea
+      matInput
+      [formControl]="messageControl"
+      cdkTextareaAutosize
+      cdkAutosizeMinRows="1"
+      cdkAutosizeMaxRows="4"
+      (keydown.enter)="$event.preventDefault(); sendMessage()"
+    ></textarea>
+
+  <button
+    mat-icon-button
+    matSuffix
+    color="primary"
+    cdkOverlayOrigin
+    #emojiPicker="cdkOverlayOrigin"
+    (click)="emojiPickerOpen = !emojiPickerOpen"
+    [disabled]="emojiPickerOpen"
+  >
+    <mat-icon>mood</mat-icon>
+  </button>
+
+  <button
+    mat-icon-button
+    matSuffix
+    color="primary"
+    [disabled]="messageControl.invalid"
+    (click)="sendMessage()"
+  >
+    <mat-icon>send</mat-icon>
+  </button>
+</mat-form-field>
+
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="emojiPicker"
+  [cdkConnectedOverlayOpen]="emojiPickerOpen"
+  (overlayOutsideClick)="emojiPickerOpen = false"
+>
+  <emoji-mart
+    title="Pick your emoji"
+    (emojiSelect)="onEmojiSelect($event)"
+
+  ></emoji-mart>
+</ng-template>

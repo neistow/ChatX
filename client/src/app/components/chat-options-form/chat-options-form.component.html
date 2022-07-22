@@ -1,0 +1,16 @@
+<app-user-info-control
+  class="user-info"
+  [formControl]="form.controls.userInfo"
+>
+  <h3 genderTitle class="user-info__title">Your Gender</h3>
+  <h3 ageTitle class="user-info__title">Your Age</h3>
+</app-user-info-control>
+
+<app-user-info-control
+  class="user-info"
+  [formControl]="form.controls.searchPreferences"
+  allowMultipleSelections
+>
+  <h3 genderTitle class="user-info__title">Stranger Gender</h3>
+  <h3 ageTitle class="user-info__title">Stranger Age</h3>
+</app-user-info-control>

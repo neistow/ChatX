@@ -1,0 +1,39 @@
+<ng-container [formGroup]="control">
+  <div class="button-group-wrapper">
+    <ng-content select="[genderTitle]"></ng-content>
+    <ng-container
+      [ngTemplateOutlet]="buttonToggleGroup"
+      [ngTemplateOutletContext]="{
+        formControl: control.controls.gender,
+        enumeration: genders
+    }"
+    ></ng-container>
+  </div>
+
+  <div class="button-group-wrapper">
+    <ng-content select="[ageTitle]"></ng-content>
+    <ng-container
+      [ngTemplateOutlet]="buttonToggleGroup"
+      [ngTemplateOutletContext]="{
+        formControl: control.controls.age,
+        enumeration: ageRanges
+    }"
+    ></ng-container>
+  </div>
+</ng-container>
+
+<ng-template #buttonToggleGroup let-formControl="formControl" let-enumeration="enumeration">
+  <mat-button-toggle-group
+    class="button-group"
+    [formControl]="formControl"
+    vertical
+    [multiple]="allowMultipleSelections"
+  >
+    <mat-button-toggle
+      *ngFor="let member of enumMembersMap.get(enumeration)"
+      [value]="member.value"
+    >
+      {{ member.label }}
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</ng-template>

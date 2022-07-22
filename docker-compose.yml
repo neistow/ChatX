@@ -1,0 +1,29 @@
+﻿version: "3.8"
+
+services:
+
+  cache:
+    restart: on-failure
+    image: redis:latest
+    volumes:
+      - redis-vol:/data
+    ports:
+      - "6379:6379"
+    command: redis-server
+
+  db:
+    restart: on-failure
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "1234"
+      POSTGRES_DB: "chat"
+    volumes:
+      - postgres-vol:/var/lib/postgresql/data
+
+volumes:
+  postgres-vol:
+  redis-vol:
+      

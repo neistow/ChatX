@@ -1,0 +1,18 @@
+<app-chat-statistics></app-chat-statistics>
+
+<mat-divider></mat-divider>
+
+<app-chat-options-form
+  #formRef
+  [chatOptions]="chatOptionsStore.chatOptions"
+></app-chat-options-form>
+
+<button
+  class="start-search-btn"
+  mat-flat-button
+  color="primary"
+  [disabled]="formRef.invalid"
+  (click)="startSearch(formRef.validatedValue)"
+>
+  Start Search
+</button>

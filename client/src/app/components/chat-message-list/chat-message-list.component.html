@@ -1,0 +1,5 @@
+<app-chat-message
+  *ngFor="let message of messages | async"
+  [message]="message"
+  [ngClass]="message.type"
+></app-chat-message>

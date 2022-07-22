@@ -1,0 +1,35 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-top-panel {
+  display: flex;
+  flex-direction: column;
+  background-color: #e8e8e8;
+
+  .cancel-btn {
+    align-self: flex-end;
+    margin: 0.2rem 0.2rem 0.2rem auto;
+  }
+}
+
+.chat-bottom-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0.5rem 0;
+
+  app-typing-indicator {
+    animation: blink 1.5s linear infinite;
+  }
+
+  app-message-input {
+    flex-grow: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

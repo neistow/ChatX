@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatX.Hub", "ChatX.Hub\ChatX.Hub.csproj", "{29BE6752-4A21-4EF0-BDDA-BBE15C4FFCD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatX.Domain", "ChatX.Domain\ChatX.Domain.csproj", "{AAD4D24E-0014-4A5E-8235-1F9DAEF62E06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatX.Application", "ChatX.Application\ChatX.Application.csproj", "{C82EF53F-A1F2-4E98-8114-5326730971A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatX.Infrastructure", "ChatX.Infrastructure\ChatX.Infrastructure.csproj", "{1F3C3273-AD67-4ADB-BAF1-F3B63DA8FF79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29BE6752-4A21-4EF0-BDDA-BBE15C4FFCD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29BE6752-4A21-4EF0-BDDA-BBE15C4FFCD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29BE6752-4A21-4EF0-BDDA-BBE15C4FFCD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29BE6752-4A21-4EF0-BDDA-BBE15C4FFCD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAD4D24E-0014-4A5E-8235-1F9DAEF62E06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAD4D24E-0014-4A5E-8235-1F9DAEF62E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAD4D24E-0014-4A5E-8235-1F9DAEF62E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAD4D24E-0014-4A5E-8235-1F9DAEF62E06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C82EF53F-A1F2-4E98-8114-5326730971A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C82EF53F-A1F2-4E98-8114-5326730971A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C82EF53F-A1F2-4E98-8114-5326730971A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C82EF53F-A1F2-4E98-8114-5326730971A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F3C3273-AD67-4ADB-BAF1-F3B63DA8FF79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F3C3273-AD67-4ADB-BAF1-F3B63DA8FF79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F3C3273-AD67-4ADB-BAF1-F3B63DA8FF79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F3C3273-AD67-4ADB-BAF1-F3B63DA8FF79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
